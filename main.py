@@ -128,4 +128,12 @@ def evaluate(self, test_data):
             neuron in the final layer has the highest activation."""
             test_results = [(np.argmax(self.feedforward(x)), y)
                             for (x, y) in test_data]
-            return sum(int(x == y) for (x, y) in test_results) 
+            return sum(int(x == y) for (x, y) in test_results)
+
+ef sigmoid(z):
+    """The sigmoid function."""
+    return 1.0/(1.0+np.exp(-z))
+
+def sigmoid_prime(z):
+    """Derivative of the sigmoid function."""
+    return sigmoid(z)*(1-sigmoid(z))
