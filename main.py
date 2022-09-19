@@ -130,7 +130,7 @@ def evaluate(self, test_data):
                             for (x, y) in test_data]
             return sum(int(x == y) for (x, y) in test_results)
 
-ef sigmoid(z):
+def sigmoid(z):
     """The sigmoid function."""
     return 1.0/(1.0+np.exp(-z))
 
