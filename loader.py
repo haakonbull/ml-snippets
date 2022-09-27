@@ -26,3 +26,9 @@ def load_data():
     training_data, validation_data, test_data = cPickle.load(f)
     f.close()
     return (training_data, validation_ddata, test_data)
+   
+   
+def load_data_wrapper():
+    """Return a tuple containing ``(training_data, validation_data,
+    test_data)``. Based on ``load_data``, but the format is more
+    convenient for use in our implementation of neural networks.
